@@ -30,9 +30,15 @@ def click(coords):
 
 
 def main():
+    print("Program starting...")
+    print("Press q to quit")
     while not keyboard.is_pressed("q"):
         # We get the color of the pixel for every tile
         for tile in tiles:
             # The star is here to destructure the tuple
             if pyautogui.pixel(*tiles[tile])[0] == 0:
                 click(tiles[tile])
+
+
+if __name__ == '__main__':
+    main()
